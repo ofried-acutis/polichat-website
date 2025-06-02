@@ -424,7 +424,7 @@ ul {
     background-color: #1873dc; /* Fallback if image fails */
     background-size: cover;
     background-position: center;
-    aspect-ratio: 16 / 10; /* Changed from 16/9 to 16/11 for a taller container */
+    aspect-ratio: 14.8 / 9; /* Changed from 16/9 to 16/11 for a taller container */
     border-radius: 1rem; /* rounded-xl */
     padding: 0; /* Remove padding */
     max-width: 800px; /* Allow full width */
