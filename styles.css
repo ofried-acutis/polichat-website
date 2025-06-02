@@ -300,6 +300,92 @@ ul {
     }
 }
 
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section__title {
+        font-size: 2rem;
+    }
+    .hero-section__subtitle {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .section-paragraph,
+    .description-section__text {
+        font-size: 0.9rem;
+    }
+    .capability-card__title {
+        font-size: 1rem;
+    }
+    .capability-card__description {
+        font-size: 0.85rem;
+    }
+    /* .contact-banner-header is already handled by existing media query at 768px */
+    /* .contact-line is already handled by existing media query at 768px */
+    .section_specific_content {
+        max-width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    .hero-section__content-box {
+        width: 90%;
+    }
+    /* .contact-banner-content is already handled by existing media query at 768px */
+
+    .capabilities-section__grid {
+        display: flex;
+        overflow-x: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+        /* Override grid properties */
+        grid-template-columns: none;
+        gap: 0; /* Remove gap if previously set for grid */
+        /* Scrollbar hiding */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+
+    .capabilities-section__grid::-webkit-scrollbar {
+        display: none; /* WebKit browsers */
+    }
+
+    .capabilities-section__grid .capability-card {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+        margin-right: 1rem;
+    }
+
+    /* Ensure the last card doesn't have extra margin causing overflow if container padding isn't enough */
+    .capabilities-section__grid .capability-card:last-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section__title {
+        font-size: 1.75rem;
+    }
+    .hero-section__subtitle {
+        font-size: 0.9rem;
+    }
+    .section-title {
+        font-size: 1.25rem;
+    }
+    /* .contact-banner-header is already handled by existing media query at 480px */
+    /* .contact-line is already handled by existing media query at 480px */
+    .video-section-spacing-div, /* This will override existing padding for .contact-banner-section-spacing-div at 480px */
+    .contact-banner-section-spacing-div {
+        padding: 2em 1em;
+    }
+    .hero-section__padding-wrapper {
+        padding: 1rem;
+    }
+    /* .site-footer__container is already handled by existing media query at 480px */
+}
+
 /* CONTACT BANNER SECTION */
 .contact-banner-section {
     border-bottom: 1px solid #e5e7ec;
